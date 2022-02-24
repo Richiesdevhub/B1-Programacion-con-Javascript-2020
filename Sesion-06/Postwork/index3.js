@@ -36,7 +36,7 @@ const newCart = addNewProp(cart, {
     quantity: 12
 });
 const cartModified = addPropertyToItemInCart(newCart, 'cost', 700, 'c');
-// console.log(cart);
-// console.log(newCart);
-console.log(cartModified[2].id === 'c')
+console.log(cart);
+console.log(newCart);
+// console.log(cartModified[2].id === 'c')
 console.log(cartModified);
