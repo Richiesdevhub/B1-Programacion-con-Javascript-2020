@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        button {
+            border: none;
+        }
+        
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p id="numero">100</p>
+    <button>+</button>
+    <button>-</button>
+    <button>+</button>
+    <button>-</button>
+    <button>hazme click</button>
+    <button>enviar información</button>
+    <button>limpiar forma</button>
+    <p></p>
+    <script>
+        const handleClick = function(evento) {
+            const elemento = document.getElementById("numero");
+            let n = parseInt(elemento.innerText, 10);​
+            let operation;​
+            const innerText = evento.target.innerText;​
+            if (innerText !== "+" && innerText !== "-") {
+                return
+            }​
+            if (innerText === "+") {
+                // Yo tengo que sumarle uno
+                operacion = n + 1;
+            }
+
+            if (innerText === "-") {
+                // Yo tengo que restarle uno
+                operacion = n - 1;
+            }​
+            elemento.innerText = operacion;
+        }​
+        const botones = [...document.getElementsByTagName("button")];​
+        botones.forEach(boton => {
+            boton.addEventListener("click", handleClick)
+        })
+    </script>
+</body>
+
+</html>
